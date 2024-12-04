@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:password_manager_app/screens/home_screen.dart';
 import 'package:password_manager_app/screens/main_screen.dart';
+import 'package:password_manager_app/screens/login_screen.dart';
+import 'package:password_manager_app/screens/signup_screen.dart';
 import 'package:password_manager_app/utils/app_theme.dart';
 
 void main() {
@@ -14,7 +16,12 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: lightTheme,
-      home: const MainScreen(),
+      initialRoute: '/',
+      routes: {
+        '/': (context) => const MainScreen(),
+        '/login': (context) => const LoginScreen(),
+        '/signup': (context) => const SignupScreen(),
+      },
     );
   }
 }

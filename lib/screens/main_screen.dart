@@ -6,11 +6,27 @@ class MainScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: Column(
-        children: [
-          CustomButton(title: 'Log In'),
-        ],
+    return Scaffold(
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.end,
+          children: [
+            CustomButton(
+              title: 'Log In',
+              onPressed: () {},
+            ),
+            const SizedBox(
+              height: 20,
+            ),
+            CustomButton(
+              title: 'Sign Up',
+              onPressed: () {},
+            ),
+            const SizedBox(
+              height: 80, // Added space from the bottom
+            ),
+          ],
+        ),
       ),
     );
   }
